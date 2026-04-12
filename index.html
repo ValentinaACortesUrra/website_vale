@@ -3,851 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Valentina Cortés-Urra — Coming Soon</title>
+  <meta name="robots" content="noindex, nofollow" />
 
-  <!-- ── SEO ── -->
-  <title>Dr. Valentina Cortés-Urra — Academic Portfolio</title>
-  <meta name="description" content="Academic portfolio of Dr. Valentina Cortés-Urra, postdoctoral researcher at TU Eindhoven. Research on Collaborative Housing and Homelessness. Publications, collaborations, awards, and contact information." />
-  <meta name="keywords" content="Valentina Cortés-Urra, academic, researcher, collaborative housing, homelessness, TU Eindhoven, publications" />
-  <meta name="author" content="Valentina Cortés-Urra" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://yourdomain.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="profile" />
-  <meta property="og:title"       content="Dr. Valentina Cortés-Urra — Academic Portfolio" />
-  <meta property="og:description" content="postdoctoral researcher at TU Eindhoven. Research on Collaborative Housing and Homelessness." />
-  <meta property="og:url"         content="https://yourdomain.com/" />
-  <meta property="og:image"       content="https://yourdomain.com/vale.jpeg" />
+  <style>
+    :root {
+      --white:             #f8f4ee;
+      --off-white:         #f2eee7;
+      --grey-100:          #d4d0ca;
+      --grey-300:          #a09c96;
+      --grey-500:          #6a6660;
+      --grey-800:          #2c2a28;
+      --ink:               #181614;
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Dr. Valentina Cortés-Urra" />
-  <meta name="twitter:description" content="postdoctoral researcher at TU Eindhoven. Research on Collaborative Housing and Homelessness." />
+      --terracotta:        #b85c3e;
+      --terracotta-mid:    #c97055;
+      --terracotta-light:  #d9896d;
+      --terracotta-pale:   #f0ddd7;
+      --terracotta-faint:  #faf3f0;
 
-  <!-- Schema.org — optimised for AI/chatbot indexing -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "[Your Full Name]",
-    "jobTitle": "[Your Title]",
-    "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "[Your Institution]"
-      },
-      {
-        "@type": "Organization",
-        "name": "Urban Labs",
-        "description": "Research laboratory focused on urban issues"
-      }
-    ],
-    "url": "https://yourdomain.com/",
-    "email": "mailto:v.a.cortes.urra@tue.nl",
-    "image": "https://yourdomain.com/vale.jpeg",
-    "nationality": "[Country]",
-    "sameAs": [
-      "https://scholar.google.com/citations?user=FVVMejgAAAAJ&hl=en...",
-      "https://orcid.org/0000-0002-5587-3867...",
-      "https://www.researchgate.net/profile/Valentina-A-Cortes-Urra-2...",
-      "https://www.linkedin.com/in/valentinacortesurra/..."
-    ],
-    "knowsAbout": ["Collaborative Housing", "Homelessness", "Urban Studies", "[Research Area 3]"],
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "[Your PhD Institution]"
+      --sidebar-bg:        #2e1919;
+      --sidebar-text:      #e8ddd8;
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
-  }
-  </script>
 
-  <link rel="stylesheet" href="style.css" />
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      height: 64px;
+      background: rgba(210, 90, 68, 0.91);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      flex-shrink: 0;
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    /* ── MAIN ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+    }
+
+    .card {
+      background: var(--off-white);
+      border: 1px solid var(--grey-100);
+      border-radius: 4px;
+      max-width: 560px;
+      width: 100%;
+      padding: 56px 52px;
+      text-align: center;
+      animation: fadeUp 0.6s var(--ease) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--grey-800);
+      margin-bottom: 8px;
+    }
+    h1 em {
+      color: var(--terracotta);
+      font-style: italic;
+    }
+
+    .divider {
+      width: 36px;
+      height: 2px;
+      background: var(--terracotta-pale);
+      margin: 24px auto;
+      border-radius: 2px;
+    }
+
+    p {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--grey-500);
+    }
+
+    .contact-line {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--grey-300);
+      letter-spacing: 0.02em;
+    }
+    .contact-line a {
+      color: var(--terracotta);
+      text-decoration: none;
+      border-bottom: 1px solid var(--terracotta-pale);
+      transition: border-color 0.2s;
+    }
+    .contact-line a:hover {
+      border-color: var(--terracotta);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      color: var(--grey-300);
+      border-top: 1px solid var(--grey-100);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 520px) {
+      nav { padding: 0 20px; }
+      .card { padding: 40px 28px; }
+      h1 { font-size: 1.9rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ══════════════ NAVIGATION ══════════════ -->
-  <nav id="topbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="#home" class="nav-brand" data-page="home">Valentina Cortés-Urra</a>
-      <div class="nav-links" id="navLinks">
-        <a href="#research"       data-page="research">Research</a>
-        <a href="#teaching"       data-page="teaching">Teaching</a>
-        <a href="#publications"   data-page="publications">Publications</a>
-        <a href="#conferences"    data-page="conferences">Conferences</a>
-        <a href="#talks"          data-page="talks">Talks &amp; Lectures</a>
-        <a href="#awards"         data-page="awards">Awards &amp; Grants</a>
-        <a href="#collaborations" data-page="collaborations">Collaborations</a>
-        <a href="#media"          data-page="media">Media</a>
-        <a href="#contact"        data-page="contact">Contact</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav>
+    <span class="nav-brand">Valentina Cortés-Urra</span>
   </nav>
 
-  <!-- ══════════════ APP SHELL ══════════════ -->
-  <div id="app">
-
-    <!-- ── HOME ── -->
-    <section id="home" class="page-section active" aria-label="Home">
-
-      <aside class="sidebar" role="complementary" aria-label="Profile">
-        <div class="profile-photo-wrap">
-          <img src="vale.jpeg"
-               alt="Profile photo of Valentina Cortés-Urra"
-               width="384" height="384" />
-        </div>
-
-        <p class="sidebar-name">Valentina Cortés-Urra</p>
-        <p class="sidebar-title">Architect / Msc / PhD</p>
-        <p class="sidebar-affil">
-          Department of Built Environment<br>
-          TU Eindhoven<br>
-          Urban Labs<br>
-          The Netherlands
-        </p>
-
-        <div class="sidebar-divider"></div>
-        <p class="sidebar-section-label">Links</p>
-        <div class="sidebar-links">
-          <a href="mailto:v.a.cortes.urra@tue.nl" aria-label="Email">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-            v.a.cortes.urra@tue.nl
-          </a>
-          <a href="mailto:valentinacortesu@gmail.com" aria-label="Email">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-            valentinacortesu@gmail.com
-          </a>
-          <a href="https://scholar.google.com/citations?user=FVVMejgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M2 8v8"/><path d="M6 10.5v6a6 6 0 0012 0v-6"/></svg>
-            Google Scholar
-          </a>
-          <a href="https://www.researchgate.net/profile/Valentina-A-Cortes-Urra-2" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 8h3.5a2.5 2.5 0 010 5H9v-5zm3.5 5H15l2 4"/></svg>
-            ResearchGate
-          </a>
-          <a href="https://orcid.org/0000-0002-5587-3867" target="_blank" rel="noopener" aria-label="ORCID">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 7h.01M9 12h6M9 17h6"/></svg>
-            ORCID
-          </a>
-          <a href="https://www.linkedin.com/in/valentinacortesurra/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg>
-            LinkedIn
-          </a>
-        </div>
-
-        <div class="sidebar-spacer"></div>
-
-        <a href="cv.pdf" target="_blank" rel="noopener" class="sidebar-cv-btn" aria-label="Download CV">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 10l5 5 5-5"/><path d="M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
-          Download CV
-        </a>
-      </aside>
-
-      <main class="main-content" role="main">
-        <div class="eyebrow">Academic Portfolio</div>
-        <h1>Welcome<em>.</em></h1>
-        <p class="tagline">Researcher · Scholar · [Your Primary Field]</p>
-
-        <p>
-          I am a <strong>postdoctoral researcher</strong> in the <a href="#" style="color:var(--terracotta); border-bottom:1px solid var(--terracotta-pale);">Department of Built Environment</a> at TU Eindhoven, and a member of <strong>Urban Labs</strong>. My work sits at the intersection of [research area A], [research area B], and [research area C], with a particular focus on <strong>Collaborative Housing</strong> and <strong>Homelessness</strong>.
-        </p>
-        <p>
-          My research investigates [brief description of your research questions and approach]. I draw on [methods / theories] to address questions relating to [core questions]. My work has been published in [journals or venues] and supported by [funders or fellowships].
-        </p>
-        <p>
-          Prior to my current position, I completed my PhD at [PhD institution]. I have held visiting positions at TU Eindhoven and collaborate with researchers across [regions / fields].
-        </p>
-
-        <div class="highlight-strip" role="note">
-          <p>I am currently [open to collaborations / recruiting PhD students / working on project X]. Feel free to <a href="#contact" data-page="contact" style="color:var(--terracotta);">get in touch</a>.</p>
-        </div>
-
-        <div class="interest-pills" aria-label="Research interests">
-          <span class="pill">Collaborative Housing</span>
-          <span class="pill">Homelessness</span>
-          <span class="pill">[Research Area 3]</span>
-          <span class="pill">[Method / Theory]</span>
-          <span class="pill">[Topic]</span>
-        </div>
-      </main>
-
-    </section>
-
-    <!-- ── RESEARCH ── -->
-    <section id="research" class="page-section" aria-label="Research" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Overview</div>
-          <h2>Research</h2>
-          <span class="sub">Two main themes: Collaborative Housing &amp; Homelessness</span>
-        </div>
-        <p class="intro-text">
-          My research programme is structured around two interconnected themes: <strong>Collaborative Housing</strong> and <strong>Homelessness</strong>. I draw on [methods / theories] to address questions relating to [core questions], working across multiple scales from individual experience to policy and structural analysis.
-        </p>
-
-        <div class="section-subhead">Theme 1 — Collaborative Housing</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2024 – present</div>
-            <div class="card-title">[Project Title — Collaborative Housing]</div>
-            <div class="card-meta">Funded by [Funder]. This project investigates [brief description of aims, methods, expected outcomes].</div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">[Method]</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2022 – 2024</div>
-            <div class="card-title">[Completed Project — Collaborative Housing]</div>
-            <div class="card-meta">Funded by [Funder]. [Brief description and outcomes].</div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span></div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Theme 2 — Homelessness</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2023 – present</div>
-            <div class="card-title">[Project Title — Homelessness]</div>
-            <div class="card-meta">Collaborative project with [partners]. Exploring [description].</div>
-            <div class="card-tags"><span class="tag">Homelessness</span><span class="tag">[Method]</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2020 – 2023</div>
-            <div class="card-title">[Completed Project — Homelessness]</div>
-            <div class="card-meta">Funded by [Funder]. [Brief description and outcomes].</div>
-            <div class="card-tags"><span class="tag">Homelessness</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── TEACHING ── -->
-    <section id="teaching" class="page-section" aria-label="Teaching" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Education</div>
-          <h2>Teaching</h2>
-          <span class="sub">Courses, supervision &amp; academic mentoring</span>
-        </div>
-        <p class="intro-text">
-          I am committed to engaging and rigorous teaching at both undergraduate and graduate level. My courses draw directly on my research in [field], and I welcome enquiries from prospective students and supervisees.
-        </p>
-
-        <div class="section-subhead">Current Courses</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Course Title]</div>
-            <div class="card-meta">[Level: undergraduate / master / PhD] · Department of Built Environment, TU Eindhoven<br>[Brief description of what the course covers].</div>
-            <div class="card-tags"><span class="tag">[Level]</span><span class="tag">[Semester]</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Course Title]</div>
-            <div class="card-meta">[Level] · Department of Built Environment, TU Eindhoven<br>[Brief description].</div>
-            <div class="card-tags"><span class="tag">[Level]</span></div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Past Courses</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Course Title]</div>
-            <div class="card-meta">[Level] · Department of Built Environment, TU Eindhoven</div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Student Supervision</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-title">PhD Supervision</div>
-            <div class="card-meta">I currently supervise [N] PhD students on topics related to [themes]. I am open to new PhD students — please <a href="#contact" data-page="contact" style="color:var(--terracotta);">reach out</a> if you are interested.</div>
-          </div>
-          <div class="card">
-            <div class="card-title">Master's Thesis Supervision</div>
-            <div class="card-meta">I supervise master's theses in Department of Built Environment. Students interested in collaborative housing, homelessness, or [related topics] are especially welcome to enquire.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PUBLICATIONS ── -->
-    <section id="publications" class="page-section" aria-label="Publications" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Scholarly Output</div>
-          <h2>Publications</h2>
-          <span class="sub">Peer-reviewed articles, book chapters &amp; work in progress</span>
-        </div>
-
-        <div class="section-subhead">Journal Articles</div>
-        <div class="card-list">
-
-          <div class="card">
-            <div class="card-year">2025</div>
-            <div class="card-title">Housing cooperatives in Chile: the struggle to re-emerge in a neoliberal context of growing self-management</div>
-            <div class="card-meta">
-              Darinka Czischke, Javier Ruiz-Tagle, Felipe Valenzuela, Nelson Carroza-Athens &amp; Valentina Cortés-Urra<br>
-              <em>Housing Studies</em>, 40/41(0), 1–23.<br>
-              <a href="https://doi.org/10.1080/02673037.2025.2459145" target="_blank" rel="noopener" style="color:var(--terracotta);font-size:0.82rem;">DOI: 10.1080/02673037.2025.2459145</a>
-            </div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">Chile</span><span class="tag">Cooperatives</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">The Potential of Collaborative Housing to Tackle the Social Deficit of Housing: The Chilean Case</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra, Aksel Ersoy, Darinka Czischke &amp; Vincent Gruis<br>
-              <em>Journal of Housing and the Built Environment</em>, 39(2), 697–725.<br>
-              <a href="https://doi.org/10.1007/s10901-023-10094-2" target="_blank" rel="noopener" style="color:var(--terracotta);font-size:0.82rem;">DOI: 10.1007/s10901-023-10094-2</a>
-            </div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">Chile</span><span class="tag">Social Deficit</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2023</div>
-            <div class="card-title">Addressing housing deficits from a multi-dimensional perspective: a review of Chilean housing policy</div>
-            <div class="card-meta">
-              Cortés-Urra, V., Czischke, D., &amp; Gruis, V.<br>
-              <em>International Journal of Housing Policy</em>, 0(0), 1–16.<br>
-              <a href="https://doi.org/10.1080/19491247.2022.2159123" target="_blank" rel="noopener" style="color:var(--terracotta);font-size:0.82rem;">DOI: 10.1080/19491247.2022.2159123</a>
-            </div>
-            <div class="card-tags"><span class="tag">Housing Policy</span><span class="tag">Chile</span><span class="tag">Multi-dimensional</span></div>
-          </div>
-
-        </div>
-
-        <div class="section-subhead">Book Chapters</div>
-        <div class="card-list">
-
-          <div class="card">
-            <div class="card-year">2021</div>
-            <div class="card-title">Propuestas de política pública para apoyar el desarrollo de cooperativas de vivienda autogestionarias en Chile</div>
-            <div class="card-meta">
-              Ruiz-Tagle, J., Valenzuela, F., Czischke, D., Cortés-Urra, V., Carroza, N., Encinas, F.<br>
-              In: Centro de Políticas Públicas UC (ed.), <em>Propuestas para Chile. Concurso de Políticas Públicas 2020</em>. Pontificia Universidad Católica de Chile, Santiago, pp. 145–172.
-            </div>
-            <div class="card-tags"><span class="tag">Public Policy</span><span class="tag">Chile</span><span class="tag">Cooperatives</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2023–2024</div>
-            <div class="card-title">Una aproximación a la vivienda colaborativa desde una perspectiva latinoamericana: Diálogos entre contextos norte – sur</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra &amp; Darinka Czischke<br>
-              <em>Reflexiones sobre el habitar contemporáneo II</em>. Laboratorio de la Vivienda Colectiva Contemporánea ViCoCo, Instituto Libre de Arquitectura de Jalisco A.C., ESARQ, México. <span style="color:var(--grey-300);font-size:0.8rem;">[Submitted]</span>
-            </div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">Latin America</span><span class="tag">North–South</span></div>
-          </div>
-
-        </div>
-
-        <div class="section-subhead">Work in Progress</div>
-        <div class="card-list">
-
-          <div class="card">
-            <div class="card-year">2025</div>
-            <div class="card-title">Towards the Development of Collaborative Housing in Chile: Scenario Planning and Policy Strategies</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra, Vincent Gruis, Aksel Ersoy &amp; Darinka Czischke<br>
-              <span style="color:var(--grey-300);font-size:0.82rem;font-style:italic;">In preparation for submission</span>
-            </div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">Scenario Planning</span><span class="tag">Policy</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2025</div>
-            <div class="card-title">Collaborative Housing in Chile: Precedents, Barriers, and Enablers</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra, Darinka Czischke, Vincent Gruis &amp; Aksel Ersoy<br>
-              <span style="color:var(--grey-300);font-size:0.82rem;font-style:italic;">In preparation for submission</span>
-            </div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">Chile</span><span class="tag">Barriers &amp; Enablers</span></div>
-          </div>
-
-        </div>
-
-        <div class="section-subhead">Conference Papers</div>
-        <div class="card-list">
-
-          <div class="card">
-            <div class="card-year">2023</div>
-            <div class="card-title">Scenarios for the Development of Collaborative Housing in Chile</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra, Aksel Ersoy, Darinka Czischke &amp; Vincent Gruis<br>
-              European Network for Housing Research (ENHR) Conference: <em>Urban regeneration: Shines and Shadows</em>. Collaborative Housing Working Group, Workshop N01, Łódź, Poland, 28–30 June 2023.
-            </div>
-            <div class="card-tags"><span class="tag">ENHR</span><span class="tag">Collaborative Housing</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2022</div>
-            <div class="card-title">The Potential of Collaborative Housing in the Chilean Context: Tackling the Social Deficit of Housing</div>
-            <div class="card-meta">
-              Valentina Cortés-Urra, Aksel Ersoy, Darinka Czischke &amp; Vincent Gruis<br>
-              European Network for Housing Research (ENHR) Conference: <em>The struggle for the right to housing</em>. Collaborative Housing Working Group, Workshop Nr.5, Barcelona, Spain, 31 August – 2 September 2022.
-            </div>
-            <div class="card-tags"><span class="tag">ENHR</span><span class="tag">Collaborative Housing</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2021</div>
-            <div class="card-title">Tackling Housing Deficits from a Multi-Dimensional Perspective: The Potential of Collaborative Housing in the Chilean Context</div>
-            <div class="card-meta">
-              V. A. Cortés Urra &amp; D. Czischke<br>
-              European Network for Housing Research (ENHR) Conference: <em>Unsettled Settlements: Housing in Unstable Contexts</em>. Cyprus (Online), Workgroup 1 Collaborative Housing – Session VI, 30 August – 2 September 2021.
-            </div>
-            <div class="card-tags"><span class="tag">ENHR</span><span class="tag">Collaborative Housing</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2021</div>
-            <div class="card-title">Mapping Collaborative Housing in Europe – Towards a Systematic Categorisation</div>
-            <div class="card-meta">
-              Czischke, D. K., Huisman, C. J., Dos Santos Vieira Brysch, S. L., Vergara d'Alençon, L. M., &amp; Cortés Urra, V. A.<br>
-              ENHR Conference 2021, Cyprus (Online), Workgroup 1 Collaborative Housing – Session 6, 30 August – 2 September 2021, pp. 1–19.
-            </div>
-            <div class="card-tags"><span class="tag">ENHR</span><span class="tag">Europe</span><span class="tag">Mapping</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2021</div>
-            <div class="card-title">Collaborative processes in the global south: Precedents and perspectives of collaborative housing in Chile</div>
-            <div class="card-meta">
-              V. A. Cortés Urra &amp; D. Czischke<br>
-              IDoBE International Conference: <em>Uncertainties in the Built Environment: How can we build a resilient future in the new normal?</em> London South Bank University, UK, 22–23 November 2021. Proceedings ISBN: 978-1-3999-2365-1.
-            </div>
-            <div class="card-tags"><span class="tag">Global South</span><span class="tag">Collaborative Housing</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2021</div>
-            <div class="card-title">Collaborative Housing for Chile: Approaching Multi-dimensional Housing Deficits</div>
-            <div class="card-meta">
-              V. A. Cortés Urra &amp; D. Czischke<br>
-              14th International Conference of the International Society for Third Sector Research (ISTR): <em>Global Civil Society in Uncertain Times: Strengthening Diversity and Sustainability</em>. Workshop No.5 Inhabiting Spaces in the Covid-19 Crisis, Montreal, Canada, 12–15 July 2021.
-            </div>
-            <div class="card-tags"><span class="tag">ISTR</span><span class="tag">Collaborative Housing</span><span class="tag">Third Sector</span></div>
-          </div>
-
-          <div class="card">
-            <div class="card-year">2019</div>
-            <div class="card-title">Towards the Development of Collaborative Housing in Chile: Precedents &amp; Perspectives</div>
-            <div class="card-meta">
-              V. A. Cortés Urra &amp; D. Czischke<br>
-              European Network for Housing Research (ENHR) Conference: <em>Housing for The Next European Social Model</em>. Workshop 1, Session V – Collaborative Housing, Athens, Greece, 27–30 August 2019.
-            </div>
-            <div class="card-tags"><span class="tag">ENHR</span><span class="tag">Collaborative Housing</span><span class="tag">Chile</span></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONFERENCES ── -->
-    <section id="conferences" class="page-section" aria-label="Conferences" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Participation</div>
-          <h2>Conferences</h2>
-          <span class="sub">Presentations &amp; organisation</span>
-        </div>
-
-        <div class="section-subhead">Conference Presentations</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2025</div>
-            <div class="card-title">[Presentation Title]</div>
-            <div class="card-meta">[Conference Name], [City, Country], [Month Year].<br>Paper: <em>[Paper title]</em></div>
-            <div class="card-tags"><span class="tag">oral</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">[Presentation Title]</div>
-            <div class="card-meta">[Conference Name], [City, Country], [Month Year].</div>
-            <div class="card-tags"><span class="tag">poster</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">[Presentation Title]</div>
-            <div class="card-meta">[Conference Name], [City, Country], [Month Year].</div>
-            <div class="card-tags"><span class="tag">oral</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2023</div>
-            <div class="card-title">[Presentation Title]</div>
-            <div class="card-meta">[Conference Name], [City, Country], [Month Year].</div>
-            <div class="card-tags"><span class="tag">oral</span><span class="tag">invited</span></div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Conference Organisation</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">Session chair / Panel organiser: [Session Title]</div>
-            <div class="card-meta">[Conference Name], [City], [Year].</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── TALKS & LECTURES ── -->
-    <section id="talks" class="page-section" aria-label="Talks and lectures" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Dissemination</div>
-          <h2>Talks &amp; Lectures</h2>
-          <span class="sub">Invited talks, public lectures &amp; guest teaching</span>
-        </div>
-
-        <div class="section-subhead">Invited Talks</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2025</div>
-            <div class="card-title">[Talk Title]</div>
-            <div class="card-meta">[Seminar / Colloquium name], Department of Built Environment, TU Eindhoven, [City], [Month Year].</div>
-          </div>
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">[Talk Title]</div>
-            <div class="card-meta">[Seminar / Workshop name], TU Eindhoven, [Country], [Month Year].</div>
-          </div>
-          <div class="card">
-            <div class="card-year">2023</div>
-            <div class="card-title">[Talk Title]</div>
-            <div class="card-meta">[Seminar / Public lecture name], [Institution / Venue], [City], [Month Year].</div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Guest Lectures</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">[Topic / Course Name]</div>
-            <div class="card-meta">[Course name], Department of Built Environment, TU Eindhoven, [City], [Month Year].</div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Public Engagement</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2024</div>
-            <div class="card-title">[Public lecture / podcast / media appearance title]</div>
-            <div class="card-meta">[Event / Organisation], [City / Online], [Month Year].</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── AWARDS & GRANTS ── -->
-    <section id="awards" class="page-section" aria-label="Awards and grants" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Recognition</div>
-          <h2>Awards &amp; Grants</h2>
-          <span class="sub">Fellowships, prizes &amp; funding</span>
-        </div>
-
-        <div class="section-subhead">Grants &amp; Fellowships</div>
-        <div>
-          <div class="award-item">
-            <div class="award-year">2024</div>
-            <div><div class="award-title">[Grant / Fellowship Name]</div><div class="award-org">[Funding Body] · €[Amount] · [Duration]</div></div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2022</div>
-            <div><div class="award-title">[Fellowship Name]</div><div class="award-org">[Funding Body] · [Brief description]</div></div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2020</div>
-            <div><div class="award-title">[Grant Name]</div><div class="award-org">[Funding Body] · €[Amount]</div></div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Awards &amp; Honours</div>
-        <div>
-          <div class="award-item">
-            <div class="award-year">2023</div>
-            <div><div class="award-title">[Award Name]</div><div class="award-org">[Awarding Organisation] · [Brief description]</div></div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2021</div>
-            <div><div class="award-title">[Best Paper Award / Prize]</div><div class="award-org">[Conference / Journal] · [Brief description]</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── COLLABORATIONS ── -->
-    <section id="collaborations" class="page-section" aria-label="Collaborations" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Network</div>
-          <h2>Collaborations</h2>
-          <span class="sub">Partners &amp; networks</span>
-        </div>
-        <p class="intro-text">
-          I collaborate with researchers across institutions and disciplines. My collaborative network spans [regions / fields]. I am always open to new collaborations — feel free to <a href="#contact" data-page="contact" style="color:var(--terracotta);">reach out</a>.
-        </p>
-
-        <div class="section-subhead">Academic Partners</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-title">[Collaborator Name]</div>
-            <div class="card-meta">postdoctoral researcher, TU Eindhoven, [Country]<br>Collaboration on: [topic or project]</div>
-          </div>
-          <div class="card">
-            <div class="card-title">[Collaborator Name]</div>
-            <div class="card-meta">postdoctoral researcher, TU Eindhoven, [Country]<br>Collaboration on: [topic or project]</div>
-          </div>
-          <div class="card">
-            <div class="card-title">[Collaborator Name]</div>
-            <div class="card-meta">postdoctoral researcher, TU Eindhoven, [Country]<br>Collaboration on: [topic or project]</div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Institutional Partners</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-title">[Institution / Organisation Name]</div>
-            <div class="card-meta">[City, Country] · [Type of partnership or joint project]</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── MEDIA ── -->
-    <section id="media" class="page-section" aria-label="Media" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Press &amp; Public Engagement</div>
-          <h2>Media</h2>
-          <span class="sub">Interviews, press coverage &amp; public commentary</span>
-        </div>
-        <p class="intro-text">
-          My research has attracted attention from media outlets and the broader public. Below is a selection of press coverage, interviews, podcasts, and other public-facing contributions. For press enquiries, please <a href="#contact" data-page="contact" style="color:var(--terracotta);">get in touch</a>.
-        </p>
-
-        <div class="section-subhead">Interviews &amp; Podcasts</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Interview / Podcast Title]</div>
-            <div class="card-meta">[Outlet / Show Name] · [Month Year]<br><a href="#" style="color:var(--terracotta);font-size:0.82rem;">Listen / Watch →</a></div>
-            <div class="card-tags"><span class="tag">podcast</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Interview Title]</div>
-            <div class="card-meta">[Outlet / Journalist] · [Month Year]</div>
-            <div class="card-tags"><span class="tag">radio</span></div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Press Coverage</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Article Headline]</div>
-            <div class="card-meta"><em>[Newspaper / Magazine]</em> · [Month Year]<br><a href="#" style="color:var(--terracotta);font-size:0.82rem;">Read article →</a></div>
-          </div>
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Article Headline]</div>
-            <div class="card-meta"><em>[Newspaper / Magazine]</em> · [Month Year]</div>
-          </div>
-        </div>
-
-        <div class="section-subhead">Opinion &amp; Commentary</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">[Year]</div>
-            <div class="card-title">[Op-ed / Blog post title]</div>
-            <div class="card-meta"><em>[Platform / Outlet]</em> · [Month Year]<br><a href="#" style="color:var(--terracotta);font-size:0.82rem;">Read →</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACT ── -->
-    <section id="contact" class="page-section" aria-label="Contact" hidden>
-      <div class="inner-page">
-        <div class="page-header">
-          <div class="eyebrow">Get in touch</div>
-          <h2>Contact</h2>
-          <span class="sub">I welcome enquiries from students, collaborators &amp; the press</span>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-item">
-            <div class="label">Email</div>
-            <div class="value"><a href="mailto:v.a.cortes.urra@tue.nl" style="color:var(--terracotta);">v.a.cortes.urra@tue.nl</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="label">Office</div>
-            <div class="value">Room [XXX], [Building]<br>TU Eindhoven<br>[Street], [City]</div>
-          </div>
-          <div class="contact-item">
-            <div class="label">Office Hours</div>
-            <div class="value">[Day], [Time]<br>Or by appointment</div>
-          </div>
-          <div class="contact-item">
-            <div class="label">Postal Address</div>
-            <div class="value">Department of Built Environment<br>TU Eindhoven<br>[Address line 2]<br>[Postcode, Country]</div>
-          </div>
-        </div>
-
-        <!-- ── CONTACT FORM (Formspree) ── -->
-        <!-- Replace YOUR_FORM_ID with the ID from your Formspree dashboard -->
-        <div class="contact-form">
-          <h3>Send a message</h3>
-          <p class="form-sub">Fill in the form below and I will get back to you as soon as possible.</p>
-
-          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label for="email">Your email</label>
-                <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
-            </div>
-            <!-- Honeypot anti-spam -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <button type="submit" class="form-submit">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Send message
-            </button>
-          </form>
-
-          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
-            ✓ &nbsp;Thank you — your message has been sent. I will be in touch shortly.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </div><!-- /#app -->
-
-  <!-- ══════════════ FOOTER ══════════════ -->
-  <footer role="contentinfo">
-    <span>© <span id="year"></span> Valentina Cortés-Urra · TU Eindhoven</span>
+  <main>
+    <div class="card">
+      <div class="eyebrow">Academic Portfolio</div>
+      <h1>Under construction<em>.</em></h1>
+      <div class="divider"></div>
+      <p>
+        This website is currently being built and will be live soon.
+        Thank you for your patience.
+      </p>
+      <p class="contact-line">
+        In the meantime, feel free to reach out by
+        <a href="mailto:v.a.cortes.urra@tue.nl">email</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Valentina Cortés-Urra · TU Eindhoven
   </footer>
 
-  <!-- ══════════════ JS ══════════════ -->
   <script>
-    // ── Year ──
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ── SPA Navigation ──
-    let current = 'home';
-
-    function showPage(id, pushState = true) {
-      if (id === current) return;
-
-      const prev = document.getElementById(current);
-      if (prev) {
-        prev.classList.remove('visible');
-        setTimeout(() => {
-          prev.classList.remove('active');
-          prev.hidden = true;
-        }, 420);
-      }
-
-      const next = document.getElementById(id);
-      if (!next) return;
-      next.hidden = false;
-      next.classList.add('active');
-      requestAnimationFrame(() =>
-        requestAnimationFrame(() => next.classList.add('visible'))
-      );
-
-      document.querySelectorAll('[data-page]').forEach(a =>
-        a.classList.toggle('active', a.dataset.page === id)
-      );
-
-      current = id;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (pushState) history.pushState({ page: id }, '', `#${id}`);
-    }
-
-    // Init home
-    const homeEl = document.getElementById('home');
-    homeEl.hidden = false;
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => homeEl.classList.add('visible'))
-    );
-
-    // Click delegation
-    document.addEventListener('click', e => {
-      const a = e.target.closest('[data-page]');
-      if (!a) return;
-      e.preventDefault();
-      showPage(a.dataset.page);
-    });
-
-    // Browser back/forward
-    window.addEventListener('popstate', e => {
-      showPage((e.state && e.state.page) || 'home', false);
-    });
-
-    // Handle direct URL hash on load
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) showPage(hash, false);
-
-    // ── Mobile nav toggle ──
-    const toggle = document.getElementById('navToggle');
-    const navEl  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      const open = navEl.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    navEl.addEventListener('click', () => {
-      navEl.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
-    });
-
-    // ── Formspree AJAX submission ──
-    const form    = document.getElementById('contactForm');
-    const success = document.getElementById('formSuccess');
-
-    if (form) {
-      form.addEventListener('submit', async e => {
-        e.preventDefault();
-        const btn = form.querySelector('.form-submit');
-        btn.textContent = 'Sending…';
-        btn.disabled = true;
-
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          });
-
-          if (res.ok) {
-            form.reset();
-            form.style.display = 'none';
-            success.style.display = 'block';
-          } else {
-            btn.textContent = 'Error — try again';
-            btn.disabled = false;
-          }
-        } catch {
-          btn.textContent = 'Error — try again';
-          btn.disabled = false;
-        }
-      });
-    }
   </script>
+
 </body>
 </html>
