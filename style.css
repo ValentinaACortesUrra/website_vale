@@ -731,6 +731,28 @@ nav#topbar .nav-links a.active {
   font-weight: 400; 
 }
 
+.course-theme {
+  margin: 6px 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.course-theme::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 3px;
+  height: 0.9em;
+  background: #c7c7c7;
+  border-radius: 2px;
+}
+
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--grey-100);
