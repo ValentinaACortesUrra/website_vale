@@ -616,7 +616,11 @@ nav#topbar .nav-links a.active {
 .award-item:last-child { border-bottom: none; }
 .award-year  { font-size: 0.82rem; color: var(--terracotta); font-weight: 500; padding-top: 2px; }
 .award-title { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
-.award-org   { font-size: 0.86rem; color: var(--grey-500); }
+.award-org   { font-size: 0.86rem; color: var(--grey-500); margin-bottom: 8px; }
+.award-desc  { font-size: 0.88rem; color: var(--grey-500); line-height: 1.7; }
+.award-affils { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+.award-affil { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--grey-500); }
+.award-affil svg, .award-affil img { flex-shrink: 0; color: var(--terracotta); object-fit: contain; }
 
 /* ── TEACHING: COURSES ── */
 .teaching-courses {
@@ -752,6 +756,40 @@ nav#topbar .nav-links a.active {
   background: #c7c7c7;
   border-radius: 2px;
 }
+
+.back-home {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  text-decoration: none;
+  border-bottom: 1px solid var(--terracotta-pale);
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease;
+}
+
+.back-home:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+
+
+.back-home span {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+
+.back-home:hover span {
+  transform: translateY(-2px);
+}
+
 
 /* ── FOOTER ── */
 footer {
