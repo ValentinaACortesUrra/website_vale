@@ -32,6 +32,7 @@
     "@type": "Person",
     "name": "Valentina Cortés Urra",
     "jobTitle": "Postdoctoral researcher",
+    "description": "Postdoctoral researcher in the Urbanism and Urban Architecture (UUA) group at TU Eindhoven, investigating sustainable and adequate housing alternatives for vulnerable populations, Housing-First approaches, and intergenerational and community-based housing models.",
     "affiliation": [
       {
         "@type": "Organization",
@@ -53,11 +54,18 @@
       "https://www.researchgate.net/profile/Valentina-A-Cortes-Urra-2",
       "https://www.linkedin.com/in/valentinacortesurra/"
     ],
-    "knowsAbout": ["Housing Systems", "Urban Design", "Housing Policies", "Collaborative Housing", "Homelessness", "Scenario Planning"],
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "TU Delft"
-    }
+    "knowsAbout": ["Housing Systems", "Urban Design", "Housing Policies", "Collaborative Housing", "Homelessness", "Scenario Planning", "Housing First", "Energy Poverty", "Intergenerational Housing"],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "TU Delft"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad de Concepción"
+      }
+    ],
+    "award": "Becas Chile en el Extranjero (ANID)"
   }
   </script>
 
@@ -70,7 +78,16 @@
     <div class="nav-inner">
       <a href="#home" class="nav-brand" data-page="home">Valentina Cortés-Urra</a>
       <div class="nav-links" id="navLinks">
-        <!-- <a href="#research"       data-page="research">Research</a> -->
+        <div class="nav-dropdown">
+          <a href="#research" data-page="research" class="nav-dropdown-toggle">
+            Research
+            <svg class="nav-caret" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="#research/profile" data-page="research" data-subpage="profile">Research profile</a>
+            <a href="#research/nwa" data-page="research" data-subpage="nwa">NWA: Passende Huisvesting</a>
+          </div>
+        </div>
         <a href="#publications"   data-page="publications">Publications</a>
         <a href="#presentations"    data-page="presentations">Presentations &amp; talks</a>
         <a href="#teaching"       data-page="teaching">Teaching</a>
@@ -190,43 +207,58 @@
         <a href="#home" data-page="home" class="back-home">Back to home</a>
         <div class="page-header">
           <h2>Research</h2>
-          <span class="sub">Two main themes: Collaborative Housing &amp; Homelessness</span>
-        </div>
-        <p class="intro-text">
-          My research programme is structured around two interconnected themes: <strong>Collaborative Housing</strong> and <strong>Homelessness</strong>. I draw on [methods / theories] to address questions relating to [core questions], working across multiple scales from individual experience to policy and structural analysis.
-        </p>
-
-        <div class="section-subhead">Theme 1 - Collaborative Housing</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2024 - present</div>
-            <div class="card-title">[Project Title - Collaborative Housing]</div>
-            <div class="card-meta">Funded by [Funder]. This project investigates [brief description of aims, methods, expected outcomes].</div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span><span class="tag">[Method]</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2022 - 2024</div>
-            <div class="card-title">[Completed Project - Collaborative Housing]</div>
-            <div class="card-meta">Funded by [Funder]. [Brief description and outcomes].</div>
-            <div class="card-tags"><span class="tag">Collaborative Housing</span></div>
-          </div>
+          <span class="sub">Research profile &amp; the NWA Passende Huisvesting project</span>
         </div>
 
-        <div class="section-subhead">Theme 2 - Homelessness</div>
-        <div class="card-list">
-          <div class="card">
-            <div class="card-year">2023 - present</div>
-            <div class="card-title">[Project Title - Homelessness]</div>
-            <div class="card-meta">Collaborative project with [partners]. Exploring [description].</div>
-            <div class="card-tags"><span class="tag">Homelessness</span><span class="tag">[Method]</span></div>
-          </div>
-          <div class="card">
-            <div class="card-year">2020 - 2023</div>
-            <div class="card-title">[Completed Project - Homelessness]</div>
-            <div class="card-meta">Funded by [Funder]. [Brief description and outcomes].</div>
-            <div class="card-tags"><span class="tag">Homelessness</span></div>
-          </div>
+        <!-- ── Sub-page: Research profile ── -->
+        <div class="subpage-content active visible" id="research-profile" data-subpage-panel="profile">
+
+          <div class="subpage-eyebrow">Research Profile</div>
+
+          <blockquote class="profile-quote">
+            <p>&ldquo;Housing is more than just housing&rdquo; &mdash; it is not enough to provide housing with adequate materials, habitability and access to urban amenities; housing is a &ldquo;home for its residents,&rdquo; the place where they build social relationships and where they feel they belong.</p>
+          </blockquote>
+
+          <nav class="pub-subnav" aria-label="Jump to section" style="display:flex;gap:1.5rem;margin:1.5rem 0 2rem;flex-wrap:wrap;">
+            <a href="#profile-research"  style="font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--terracotta);text-decoration:none;border-bottom:1px solid var(--terracotta-pale);padding-bottom:2px;">Research profile</a>
+            <a href="#profile-academic"  style="font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--terracotta);text-decoration:none;border-bottom:1px solid var(--terracotta-pale);padding-bottom:2px;">Academic background</a>
+          </nav>
+
+          <article itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="Valentina Cortés Urra" />
+
+            <h3 class="section-subhead" id="profile-research">Research profile</h3>
+            <p class="intro-text" itemprop="description">
+              Valentina Cortés-Urra is a <strong>postdoctoral researcher</strong> in the research group <span itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Urbanism and Urban Architecture (UUA)</span></span> at the Department of Built Environment of Eindhoven University of Technology (TU/e). Valentina is an architect, urbanist, and geographer who focuses on investigating sustainable and adequate housing alternatives for vulnerable populations, the influence of housing and the urban environment on residents' social relations, and intergenerational and community-based approaches to housing.
+            </p>
+            <p class="intro-text">
+              Cortés-Urra is a researcher in the <strong>UrbanLabs</strong> team and the <strong>&lsquo;Home for All&rsquo;</strong> project, developed by TU/e with local and national partners, focused on engaging partners, students and professionals in designing sustainable housing for youth at risk of homelessness. Together with Dr. Oana Druta and Dr. Pieter van Wesemael, she investigates Housing-First approaches and adequate housing models for reducing homelessness in the Netherlands. Her research, funded by the <strong>Dutch Research Agenda (NWA)</strong>, aims to contribute to systemic change for people experiencing homelessness by evaluating Dutch regional and local housing policies, investigating innovative housing designs, and proposing policy strategies. This research supports the <strong>Dutch National Action Plan 2023&ndash;2030</strong> and is carried out with 30 partners, including universities, designers, advocates, and housing and healthcare organisations.
+            </p>
+            <p class="intro-text">
+              Valentina is also an associate editor at the <em>Journal of Housing and the Built Environment</em>, and part of the international scientific committee at <em>Urbe, Arquitectura, Ciudad y Territorio</em> (Universidad de Concepción) and <em>Hábitat y Sociedad</em> (Universidad de Sevilla).
+            </p>
+
+            <h3 class="section-subhead" id="profile-academic">Academic background</h3>
+            <p class="intro-text">
+              Valentina Cortés-Urra is a Chilean architect with a Master's in Geographic Analysis from the <span itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity"><span itemprop="name">Universidad de Concepción</span></span>, where she graduated with distinction. During her studies, she served as a teaching assistant in architecture theory, territorial analysis, and environmental standards, and collaborated in the accreditation of the Master's programme. Professionally, she worked as an architect, urban planner, and landscaper on projects such as <strong>Parque Yumbel</strong> and <strong>Parque Quilque</strong>, and as an urban analyst for the Urban Development Plan of Hualpén.
+            </p>
+            <p class="intro-text">
+              Her early research focused on vulnerable and middle-income families, exploring social housing, informal settlements, and policy-driven urban transformations in Tucapel Bajo (1985&ndash;2014) and Lomas Coloradas (1990&ndash;2015). In 2018, Valentina was awarded the <span itemprop="award">Becas Chile en el Extranjero</span> for academic excellence by ANID to pursue doctoral studies at <span itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity"><span itemprop="name">Delft University of Technology</span></span> in the Netherlands, where she obtained her PhD in Housing Management in 2025.
+            </p>
+            <p class="intro-text">
+              Her dissertation, <cite>&ldquo;Collaborative Housing in Chile: Policy, Precedents, Scenarios, and Long-term Implementation Strategies,&rdquo;</cite> examined how collaborative housing can address social deficits, foster cohesion, and support inclusive and sustainable futures. Her work bridges housing studies, urban planning, and policy analysis, with a focus on collaborative housing models, institutional arrangements, social sustainability, intergenerational living, homelessness, energy poverty in housing, and participatory processes in urban development.
+            </p>
+          </article>
+
         </div>
+
+        <!-- ── Sub-page: NWA Passende Huisvesting ── -->
+        <div class="subpage-content" id="research-nwa" data-subpage-panel="nwa" hidden>
+
+          <div class="subpage-eyebrow">NWA: Passende Huisvesting</div>
+
+        </div>
+
       </div>
     </section>
 
@@ -1250,7 +1282,47 @@
       if (!a) return;
       e.preventDefault();
       showPage(a.dataset.page);
+      if (a.dataset.subpage) {
+        showSubpage(document.getElementById(a.dataset.page), a.dataset.subpage);
+      }
     });
+
+    // ── Sub-page navigation (e.g. Research → "Research profile" / "NWA") ──
+    function showSubpage(sectionEl, subId, pushHash = true) {
+      if (!sectionEl) return;
+      const panels = sectionEl.querySelectorAll('.subpage-content');
+      if (!panels.length) return;
+      const navLinks = document.querySelectorAll(`.nav-dropdown-menu a[data-page="${sectionEl.id}"]`);
+
+      let matched = [...panels].some(p => p.dataset.subpagePanel === subId);
+      if (!matched) subId = panels[0].dataset.subpagePanel;
+
+      panels.forEach(panel => {
+        const isTarget = panel.dataset.subpagePanel === subId;
+        if (isTarget) {
+          panel.hidden = false;
+          panel.classList.add('active');
+          requestAnimationFrame(() =>
+            requestAnimationFrame(() => panel.classList.add('visible'))
+          );
+        } else {
+          panel.classList.remove('visible');
+          panel.classList.remove('active');
+          panel.hidden = true;
+        }
+      });
+
+      navLinks.forEach(link => {
+        const isTarget = link.dataset.subpage === subId;
+        link.classList.toggle('active', isTarget);
+        if (isTarget) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+
+      if (pushHash) {
+        history.pushState({ page: sectionEl.id, subpage: subId }, '', `#${sectionEl.id}/${subId}`);
+      }
+    }
 
     // ── In-page anchor links (e.g. publication subsections) ──
     document.addEventListener('click', e => {
@@ -1266,12 +1338,19 @@
 
     // Browser back/forward
     window.addEventListener('popstate', e => {
-      showPage((e.state && e.state.page) || 'home', false);
+      const pageId = (e.state && e.state.page) || 'home';
+      showPage(pageId, false);
+      if (e.state && e.state.subpage) {
+        showSubpage(document.getElementById(pageId), e.state.subpage, false);
+      }
     });
 
-    // Handle direct URL hash on load
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) showPage(hash, false);
+    // Handle direct URL hash on load (supports "#page" and "#page/subpage")
+    const [hashPage, hashSub] = window.location.hash.replace('#', '').split('/');
+    if (hashPage && document.getElementById(hashPage)) {
+      showPage(hashPage, false);
+      if (hashSub) showSubpage(document.getElementById(hashPage), hashSub, false);
+    }
 
     // ── Mobile nav toggle ──
     const toggle = document.getElementById('navToggle');
