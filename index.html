@@ -258,6 +258,46 @@
 
           <div class="subpage-eyebrow">NWA: Passende Huisvesting</div>
 
+          <nav class="pub-subnav" aria-label="Jump to section">
+            <a href="#nwa-project">Project description</a>
+            <a href="#nwa-policy">Policy analysis</a>
+            <a href="#nwa-scenarios">Scenarios planning</a>
+            <a href="#nwa-design">Design studios: Home for All</a>
+          </nav>
+
+          <h3 class="section-subhead" id="nwa-project">Project description</h3>
+
+          <h3 class="section-subhead" id="nwa-policy">Ongoing research: Policy analysis</h3>
+
+          <h3 class="section-subhead" id="nwa-scenarios">Ongoing research: Scenarios planning</h3>
+
+          <h3 class="section-subhead" id="nwa-design">Design studios: Home for All</h3>
+
+          <article itemscope itemtype="https://schema.org/Course">
+            <meta itemprop="name" content="Home for All — Master Project" />
+            <meta itemprop="provider" content="TU Eindhoven" />
+            <p class="intro-text" itemprop="description">
+              In this studio, we address housing as a spatial justice issue that demands multi-scale social and spatial intervention. Through this lens, students engaging with theoretical frameworks on the right to adequate housing create new living concepts and examine how urban systems can support integrated care, as well as the design of adequate housing models that address the needs of different target groups within youth populations. The studio operates through interdisciplinary collaboration, incorporating empathy as a core design competency by integrating meaningful participatory settings with societal partners to develop its projects. Students formulate an urban neighbourhood vision of interventions, design a brief, and create detailed designs at both the neighbourhood and building scales for specific locations in the city of Eindhoven and/or its surroundings. The emphasis is on creating spatial conditions that enable both care and housing to function as interconnected urban systems.
+            </p>
+            <p class="course-role">
+              Teachers: <span itemprop="instructor" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Valentina Cortés-Urra</span></span> and Aroosha Zahid
+            </p>
+            <p class="intro-text">
+              <a href="https://digitalexhibition.arch.tue.nl/home-for-all-2025/" target="_blank" rel="noopener" itemprop="url" style="color:var(--terracotta); border-bottom:1px solid var(--terracotta-pale);">View the full studio entry on the TU/e Digital Exhibition</a>
+            </p>
+
+            <div class="poster-grid">
+              <figure class="poster-card">
+                <img src="assets/posterstefanevers.jpg" alt="Home for All studio poster by Stefan Evers" loading="lazy" itemprop="image" class="poster-zoomable" tabindex="0" role="button" aria-label="Enlarge poster by Stefan Evers" />
+                <figcaption>Poster by Stefan Evers</figcaption>
+              </figure>
+              <figure class="poster-card">
+                <img src="assets/posteresthertekoppele.png" alt="Home for All studio poster by Esther te Koppele" loading="lazy" itemprop="image" class="poster-zoomable" tabindex="0" role="button" aria-label="Enlarge poster by Esther te Koppele" />
+                <figcaption>Poster by Esther te Koppele</figcaption>
+              </figure>
+            </div>
+          </article>
+
         </div>
 
       </div>
@@ -1283,6 +1323,14 @@
   </div><!-- /#app -->
 
   <!-- ══════════════ FOOTER ══════════════ -->
+  <!-- ══════════════ IMAGE LIGHTBOX ══════════════ -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged image">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
   <footer role="contentinfo">
     <span>© <span id="year"></span> Valentina Cortés-Urra · TU Eindhoven</span>
   </footer>
@@ -1417,6 +1465,39 @@
     navEl.addEventListener('click', () => {
       navEl.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
+    });
+
+    // ── Image lightbox (e.g. poster enlarge on click) ──
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(img) {
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.hidden = false;
+      requestAnimationFrame(() => lightbox.classList.add('visible'));
+      lightboxClose.focus();
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('visible');
+      lightboxImg.src = '';
+      setTimeout(() => { lightbox.hidden = true; }, 250);
+    }
+
+    document.addEventListener('click', e => {
+      const zoomable = e.target.closest('.poster-zoomable');
+      if (zoomable) openLightbox(zoomable);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && document.activeElement?.classList.contains('poster-zoomable')) {
+        openLightbox(document.activeElement);
+      }
+      if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
     });
 
     // ── Formspree AJAX submission ──

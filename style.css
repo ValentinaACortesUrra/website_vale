@@ -616,6 +616,82 @@ nav#topbar .nav-links a.active {
   background: var(--grey-100);
 }
 
+/* ── POSTER GRID (design studio poster images, e.g. Research/NWA) ── */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 660px;
+  margin: 28px 0 22px;
+}
+.poster-card img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--grey-50);
+}
+.poster-card img.poster-zoomable {
+  cursor: zoom-in;
+  transition: opacity var(--transition);
+}
+.poster-card img.poster-zoomable:hover,
+.poster-card img.poster-zoomable:focus-visible {
+  opacity: 0.88;
+}
+.poster-card figcaption {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--grey-500);
+  text-align: center;
+}
+
+/* ── LIGHTBOX (poster enlarge on click) ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(24,22,20,0.92);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.lightbox[hidden] { display: none; }
+.lightbox.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  transform: scale(0.97);
+  transition: transform var(--transition);
+}
+.lightbox.visible img { transform: scale(1); }
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.lightbox-close:hover,
+.lightbox-close:focus-visible { background: var(--terracotta); }
+
 /* ── CARDS ── */
 .card-list { display: flex; flex-direction: column; gap: 3px; }
 
@@ -996,6 +1072,7 @@ footer {
   .nav-caret { display: none; }
 
   .contact-grid { grid-template-columns: 1fr; }
+  .poster-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .inner-page { padding: 56px 24px 80px; }
   .main-content h1 { font-size: 2.8rem; }
