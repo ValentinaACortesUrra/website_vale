@@ -730,6 +730,16 @@ nav#topbar .nav-links a.active {
 /* ── NEWS & MEDIA CARDS ── */
 .media-card-list { display: flex; flex-direction: column; gap: 28px; }
 .media-card { padding: 28px 32px 32px; }
+.media-card-figure { margin: 0 0 20px; }
+.media-card-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
 .video-embed {
   position: relative;
   width: 100%;
