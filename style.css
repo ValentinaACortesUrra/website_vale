@@ -870,6 +870,23 @@ nav#topbar .nav-links a.active {
 .award-affil { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--grey-500); }
 .award-affil svg, .award-affil img { flex-shrink: 0; color: var(--terracotta); object-fit: contain; width: 48px; height: 48px; }
 
+/* ── EDUCATION & LEADERSHIP: CV LIST ── */
+.cv-list { display: flex; flex-direction: column; }
+.cv-item { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--grey-50); align-items: start; }
+.cv-item:last-child { border-bottom: none; }
+.cv-year  { font-size: 0.82rem; color: var(--terracotta); font-weight: 500; padding-top: 2px; }
+.cv-title { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.cv-org   { font-size: 0.86rem; color: var(--grey-500); margin-bottom: 8px; }
+.cv-desc  { font-size: 0.88rem; color: var(--grey-500); line-height: 1.7; }
+.cv-sublist { margin: 8px 0 0; padding-left: 18px; font-size: 0.88rem; color: var(--grey-500); line-height: 1.7; }
+.cv-sublist li { margin-bottom: 4px; }
+.cv-sublist li::marker { color: var(--terracotta); }
+
+.cv-bullet-list { list-style: disc; margin: 0; padding-left: 20px; font-size: 0.92rem; color: var(--grey-500); line-height: 1.9; }
+.cv-bullet-list li { margin-bottom: 6px; }
+.cv-bullet-list li::marker { color: var(--terracotta); font-size: 1.1em; }
+.cv-bullet-list strong { color: var(--ink); font-weight: 500; }
+
 /* ── TEACHING: COURSES ── */
 .teaching-courses {
   display: flex;
@@ -1073,6 +1090,7 @@ footer {
   nav#topbar .nav-links {
     display: none;
     flex-direction: column;
+    align-items: stretch;
     position: absolute;
     top: var(--nav-height); left: 0; right: 0;
     background: #c94b38;
@@ -1080,6 +1098,10 @@ footer {
     border-bottom: 1px solid rgba(0,0,0,0.15);
     gap: 2px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  nav#topbar .nav-links > a,
+  .nav-dropdown-toggle {
+    text-align: left;
   }
   nav#topbar .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
